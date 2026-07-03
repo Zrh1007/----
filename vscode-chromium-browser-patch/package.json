@@ -1,0 +1,80 @@
+{
+  "name": "vscode-chromium-browser-patch",
+  "displayName": "Integrated Chromium Host (Experimental)",
+  "description": "Runs a real Chromium window inside the VS Code integrated browser area through a reversible Windows patch.",
+  "version": "0.1.0",
+  "publisher": "local-experimental",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.113.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:chromiumPatch.status",
+    "onCommand:chromiumPatch.createSandbox",
+    "onCommand:chromiumPatch.install",
+    "onCommand:chromiumPatch.uninstall",
+    "onCommand:chromiumPatch.downloadBrowser"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "chromiumPatch.status",
+        "title": "Chromium Patch: Show Status"
+      },
+      {
+        "command": "chromiumPatch.createSandbox",
+        "title": "Chromium Patch: Create Isolated Test Copy"
+      },
+      {
+        "command": "chromiumPatch.install",
+        "title": "Chromium Patch: Patch This VS Code Installation"
+      },
+      {
+        "command": "chromiumPatch.uninstall",
+        "title": "Chromium Patch: Restore This VS Code Installation"
+      },
+      {
+        "command": "chromiumPatch.downloadBrowser",
+        "title": "Chromium Patch: Download Chrome for Testing"
+      }
+    ],
+    "configuration": {
+      "title": "Integrated Chromium Host",
+      "properties": {
+        "chromiumPatch.browserExecutable": {
+          "type": "string",
+          "default": "",
+          "description": "Absolute path to chrome.exe or msedge.exe. Empty uses an auto-detected browser."
+        },
+        "chromiumPatch.profileDirectory": {
+          "type": "string",
+          "default": "",
+          "description": "Dedicated browser profile directory. Empty uses the extension global storage directory."
+        },
+        "chromiumPatch.closeBrowserOnExit": {
+          "type": "boolean",
+          "default": true,
+          "description": "Close the hosted browser when the patched VS Code window exits."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -w -p .",
+    "build:helper": "dotnet publish native/ChromiumHostHelper.csproj -c Release -r win-x64 --self-contained false -o runtime/helper",
+    "build": "npm run compile && npm run build:helper",
+    "test": "npm run compile && node --test out/test/*.test.js",
+    "package": "npm run build && vsce package --no-dependencies"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "@types/vscode": "^1.113.0",
+    "@vscode/vsce": "^3.6.0",
+    "typescript": "^5.8.3"
+  }
+}

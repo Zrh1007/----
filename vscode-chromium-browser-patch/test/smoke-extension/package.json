@@ -1,0 +1,16 @@
+{
+  "name": "chromium-patch-smoke",
+  "displayName": "Chromium Patch Smoke Test",
+  "version": "0.0.1",
+  "publisher": "local-experimental",
+  "engines": {
+    "vscode": "^1.113.0"
+  },
+  "enabledApiProposals": [
+    "browser"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js"
+}

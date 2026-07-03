@@ -1,0 +1,11 @@
+{
+    "workbench.browser.dataStorage": "global",
+    "files.autoSave": "afterDelay",
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "workbench.reduceMotion": "off",
+    "terminal.integrated.smoothScrolling": true,
+    "C_Cpp.errorSquiggles": "disabled",
+    "git.ignoreLimitWarning": true
+}
