@@ -1,0 +1,7 @@
+/* Formatting only: native Callouts provide folding in Obsidian. */
+.callout { border-radius: 8px; }
+.callout .callout { margin-top: .75em; margin-bottom: .5em; }
+.markdown-rendered table { border-collapse: collapse; }
+.markdown-rendered th { background: rgba(128,128,128,.12); }
+.markdown-rendered th, .markdown-rendered td { border: 1px solid rgba(128,128,128,.3); padding: .45em .75em; }
+.markdown-rendered .callout-content { overflow-x: auto; }

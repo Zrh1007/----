@@ -1,0 +1,14 @@
+{
+  "name": "vault-callouts",
+  "displayName": "算法笔记 Callout 预览",
+  "description": "在内置 Markdown 预览中显示 Obsidian 多层彩色折叠框。",
+  "publisher": "zrh-local",
+  "version": "1.0.0",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Other"],
+  "main": "./extension.js",
+  "contributes": {
+    "markdown.markdownItPlugins": true,
+    "markdown.previewStyles": ["./preview.css"]
+  }
+}

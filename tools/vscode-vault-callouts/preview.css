@@ -1,0 +1,12 @@
+.vault-callout { --callout-color: 55, 135, 225; border: 1px solid rgba(var(--callout-color), .25); border-left: 4px solid rgb(var(--callout-color)); border-radius: 8px; background: rgba(var(--callout-color), .07); margin: 1em 0; padding: .5em .8em; }
+.vault-success { --callout-color: 55, 158, 87; }
+.vault-warning { --callout-color: 212, 148, 25; }
+.vault-danger, .vault-error { --callout-color: 225, 79, 79; }
+.vault-quote { --callout-color: 128, 128, 128; }
+.vault-callout > summary { color: rgb(var(--callout-color)); font-weight: 600; cursor: pointer; padding: .15em 0; }
+.vault-callout-body { overflow-x: auto; margin-top: .5em; }
+.vault-callout-body > :last-child { margin-bottom: .25em; }
+.vault-callout pre { background: var(--vscode-textCodeBlock-background); }
+table { border-collapse: collapse; }
+th { background: rgba(128, 128, 128, .12); }
+th, td { border: 1px solid rgba(128, 128, 128, .3); padding: .45em .75em; }

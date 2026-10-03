@@ -1,0 +1,7 @@
+# Markdown 固定 LF；保留换行空格和原文代码的缩进、空行。
+*.md text eol=lf whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+.gitignore text eol=lf
+.gitattributes text eol=lf
+
+# CPH 的压缩测试数据按二进制保存。
+*.bin binary

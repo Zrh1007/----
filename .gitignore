@@ -1,0 +1,19 @@
+# 本地迁移备份、采集源文、验证依赖及导入包
+/.migration/
+
+# 保留在磁盘上的编译与性能产物
+/40编译与性能/
+*.exe
+*.dll
+*.vsix
+/vscode-chromium-browser-patch/native/bin/
+/vscode-chromium-browser-patch/native/obj/
+
+# 工具依赖与缓存
+node_modules/
+__pycache__/
+*.py[cod]
+
+# Obsidian 的个人界面状态；共享功能配置仍受版本管理
+/.obsidian/workspace*.json
+/.obsidian/graph.json
